@@ -1,0 +1,143 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007acc;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #007acc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #005f99;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background: #005f99;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: #d93025;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.weather-section {
+  margin-bottom: 30px;
+}
+
+#current-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.weather-item {
+  background: #e6f0fa;
+  padding: 15px 20px;
+  border-radius: 6px;
+  flex: 1 1 150px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.weather-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.forecast-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.forecast-card {
+  background: #007acc;
+  color: white;
+  border-radius: 6px;
+  padding: 15px;
+  flex: 1 1 120px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.forecast-card h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.forecast-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .forecast-cards {
+    flex-direction: column;
+  }
+  .forecast-card {
+    flex: 1 1 100%;
+  }
+}
